@@ -1,4 +1,9 @@
 import os
+import sys
+
+
+
+
 class Print_class:
     
     def menu_print(self): #main Menu 구성을 보여주기 위한 함수
@@ -9,7 +14,11 @@ class Print_class:
         print("4.Exit")
         print("=="*17)
     def add_menu_print(self):#Add product 메뉴
-        os.system('cls')
+        if sys.platform == "win":
+            os.system("cls")
+        else:
+            os.system('clear')
+
         print("=="*5, "Add to information", "=="*5)
         print("1) Register Product")
         print("2) Print Product")
@@ -17,8 +26,22 @@ class Print_class:
         print("4) Update Product")
         print("5) Back to menu")
     def sell_menu_print(self): #Sell 메뉴
-        os.system('cls')
+        if sys.platform == "win":
+            os.system("cls")
+        else:
+            os.system('clear')
+
         print("=="*5, "Sell Product", "=="*5)
         print("1.Put product in cart")
         print("2.Payment")
         print("3.Back to menu")
+
+
+if __name__ == "__main__":
+
+    samplePrint = Print_class()
+
+    samplePrint.menu_print()
+    samplePrint.add_menu_print()
+
+

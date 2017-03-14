@@ -1,12 +1,19 @@
+# -*- coding: utf-8 -*-
 import product_, print_, sell_
 import os
+import sys
+
 if __name__=='__main__':
 
     product_class = product_.Product()
     print_class = print_.Print_class()
     sell_class = sell_.Sell()
     while(1):
-        os.system('cls')
+        if sys.platform == "win":
+            os.system("cls")
+        else:
+            os.system('clear')
+
         print_class.menu_print()
         select_menu = input("select POS menu : ")
         if(select_menu == "1"):
