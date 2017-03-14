@@ -15,7 +15,7 @@ class PrintMenu:
 
     @staticmethod
     def print_add_menu():
-        if sys.platform == "win":
+        if sys.platform == "win32":
             os.system("cls")
         else:
             os.system('clear')
@@ -29,7 +29,7 @@ class PrintMenu:
 
     @staticmethod
     def print_sell_menu():
-        if sys.platform == "win":
+        if sys.platform == "win32":
             os.system("cls")
         else:
             os.system('clear')
