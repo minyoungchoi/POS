@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
-import product_, print_, sell_
 import os
 import sys
+
+import product_
+import print_
+import sell_
 
 if __name__=='__main__':
 
